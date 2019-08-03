@@ -8,6 +8,9 @@
     <meta name="author" content="Xiao WANG">
     <link rel="stylesheet" type="text/css" href="css/pagestyle.css">
     <title>Xiao's Homepagge</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+<!--  -->
+    <!-- <script src="js/pageScript.js"></script> -->
   </head>
 
   <body>
@@ -21,14 +24,19 @@
             I completed my studies in Ecole polytechnique(X10) in France and in Shanghai Jiao Tong University(F06) in China</p>
       </div>
     <div class="container">
-    <h2><strong>contact</strong></h2>
+    <h2 onclick="change(this)"><strong>contact</strong></h2>
     <p>Email: {firstname} dot {surname} at microsoft dot com</p>
     </div>
-
-    <svg width="200" height="200" viewBox="0 0 100 100">
-        <circle cx="100" cy="100" r="100" fill="#529fca" />
-      </svg>
-
     </div>
+
+    <svg id="word" viewBox = "0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+        <text id="text" x="20" y = "35" class="small" onclick="change(this)">Hello world</text>
+        <script>
+          function change(elem){
+              elem.style.color = "red";
+          }
+        </script>
+      </svg>
   </body>
+  
 </html>
